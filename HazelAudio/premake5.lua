@@ -4,13 +4,19 @@ project "HazelAudio"
 	cppdialect "C++17"
 	staticruntime "on"
 
+	IncludeDir = {}
+	IncludeDir["OpenAL"] = "vendor/OpenAL-Soft/include"
+	IncludeDir["ogg"] = "vendor/libogg/include"
+	IncludeDir["Vorbis"] = "vendor/Vorbis/include"
+	IncludeDir["minimp3"] = "vendor/minimp3"
+
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"src/**.h",
+		"src/**.cpp"
 	}
 
 	defines
@@ -21,11 +27,11 @@ project "HazelAudio"
 
 	includedirs
 	{
-		"%{prj.name}/src",
-		"HazelAudio/vendor/OpenAL-Soft/include",
-		"HazelAudio/vendor/libogg/include",
-		"HazelAudio/vendor/Vorbis/include",
-		"HazelAudio/vendor/minimp3"
+		"src",
+		"%{IncludeDir.OpenAL}",
+		"%{IncludeDir.ogg}",
+		"%{IncludeDir.Vorbis}",
+		"%{IncludeDir.minimp3}"
 	}
 
 	links

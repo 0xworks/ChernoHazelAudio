@@ -9,13 +9,13 @@ project "HazelAudio-Examples"
 
 	files
 	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"src/**.h",
+		"src/**.cpp"
 	}
 
 	includedirs
 	{
-		"HazelAudio/src"
+		"../HazelAudio/src"
 	}
 
 	links
