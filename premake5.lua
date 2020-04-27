@@ -23,4 +23,4 @@ group "Dependencies"
 
 group ""
 	include "HazelAudio"
-	include "Sandbox"
+	include "HazelAudio-Examples"
