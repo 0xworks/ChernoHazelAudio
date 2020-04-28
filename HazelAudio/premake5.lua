@@ -5,7 +5,9 @@ project "HazelAudio"
 	staticruntime "on"
 
 	IncludeDir = {}
-	IncludeDir["OpenAL"] = "vendor/OpenAL-Soft/include"
+	IncludeDir["OpenALInclude"] = "vendor/OpenAL-Soft/include"
+	IncludeDir["OpenALSrc"] = "vendor/OpenAL-Soft/src"
+	IncludeDir["OpenALSrcCommon"] = "vendor/OpenAL-Soft/src/common"
 	IncludeDir["ogg"] = "vendor/libogg/include"
 	IncludeDir["Vorbis"] = "vendor/Vorbis/include"
 	IncludeDir["minimp3"] = "vendor/minimp3"
@@ -28,7 +30,9 @@ project "HazelAudio"
 	includedirs
 	{
 		"src",
-		"%{IncludeDir.OpenAL}",
+		"%{IncludeDir.OpenALInclude}",
+		"%{IncludeDir.OpenALSrc}",
+		"%{IncludeDir.OpenALSrcCommon}",
 		"%{IncludeDir.ogg}",
 		"%{IncludeDir.Vorbis}",
 		"%{IncludeDir.minimp3}"
