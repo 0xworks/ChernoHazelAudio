@@ -23,8 +23,8 @@ namespace Hazel {
 	static ALCdevice* s_AudioDevice = nullptr;
 	static mp3dec_t s_Mp3d;
 
-	static uint8_t* s_AudioScratchBuffer = nullptr;
-	static uint32_t s_AudioScratchBufferSize = 0;
+	static uint8_t* s_AudioScratchBuffer;
+	static uint32_t s_AudioScratchBufferSize = 10 * 1024 * 1024; // 10mb initially
 
 	static bool s_DebugLog = true;
 
@@ -200,7 +200,6 @@ namespace Hazel {
 
 		mp3dec_init(&s_Mp3d);
 
-		s_AudioScratchBufferSize = 10 * 1024 * 1024; // 10mb initially
 		s_AudioScratchBuffer = new uint8_t[s_AudioScratchBufferSize];
 
 		// Init listener
