@@ -2,6 +2,7 @@
 **/bin/
 !vendor/bin/premake/
 bin-int/
+out/
 
 # Hazel files
 *.log
@@ -12,3 +13,4 @@ bin-int/
 **.vcxproj
 **.vcxproj.filters
 **.vcxproj.user
+/CMakeSettings.json
