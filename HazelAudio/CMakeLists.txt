@@ -24,7 +24,7 @@ set_target_properties(
 
 target_compile_definitions(
 	${PROJECT_NAME} PUBLIC
-	"_CRT_SECURE_NO_WARNINGS",
+	"_CRT_SECURE_NO_WARNINGS"
 	"AL_LIBTYPE_STATIC"
 )
 
