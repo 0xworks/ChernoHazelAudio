@@ -10,7 +10,7 @@ For PRs to upstream TheCherno/HazelAudio, follow this workflow:
 2) Branch from master
 3) Checkout the branch and do the changes that you want to submit in the PR
 4) Create PR from branch --> TheCherno/HazelAudio:master
-5) (later, if/when the PR is accepted) do step 1 again (which should fast-forward to TheCherno/master which now contains your PR, and then delete the PR branch (its no longer needed)
+5) (later, if/when the PR is accepted) do step 1 again (which should fast-forward to TheCherno/HazelAudio:master which now contains the changes from the PR, and then delete the PR branch (it's no longer needed)
 
 # Hazel Audio
 
